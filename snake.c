@@ -36,7 +36,7 @@ typedef struct Snake {
   struct Snake *next;
 } SnakeSegment;
 
-// Variáveis globais
+// Variáveis globais;
 GameState game;
 Apple apple;
 // Inicia os sementos da snake como ender vaziu;
@@ -51,12 +51,12 @@ bool gridOn = false;
 int gridResolutionX = (WINDOW_WIDTH / 2) - (GRID_DIM / 2);
 int gridResolutionY = (WINDOW_HEIGHT / 2) - (GRID_DIM / 2);
 
-// SDL globals
+// SDL globals;
 SDL_Window *window = NULL;
 SDL_Renderer *renderer = NULL;
 TTF_Font *font = NULL;
 
-// Funções do jogo
+// Funções do jogo;
 void initSDL();
 void initGame();
 void initSnake();
@@ -116,7 +116,7 @@ int main() {
 
     SDL_RenderPresent(renderer);
     // Altera a velocidade com base no nivel;
-    SDL_Delay(100 - game.level);
+    SDL_Delay(130 / game.level);
   }
 
   cleanUp();
@@ -169,7 +169,7 @@ void initSDL() {
 void initGame() {
   game.score = 0;
   game.record = 0;
-  game.level = 1;
+  game.level = 100;
   initSnake();
   increaseSnake();
   increaseSnake();
